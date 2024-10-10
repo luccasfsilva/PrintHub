@@ -19,7 +19,7 @@ document.getElementById("order-form").addEventListener("submit", function(event)
                     "Comentários Adicionais: " + comments;
 
     // Enviar o e-mail usando Google Colab
-    google.colab.kernel.invokeFunction('send_email', [emailBody], {});
+    google.colab.kernel.invokeFunction('luccasfsilva119@gmail.com', [emailBody], {});
 
     // Exibir uma mensagem de confirmação para o usuário
     alert("Pedido enviado com sucesso!");
