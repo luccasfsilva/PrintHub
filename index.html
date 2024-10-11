@@ -1,10 +1,9 @@
-<html lang="en">
+<html lang="pt-br">
 <head>
-  <div class="mouse-cursor-gradient-tracking">
-</div>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedidos de Impressão</title>
+    <title>Pedido de Impressão</title>
     <link rel="stylesheet" href="styles.css">
     <style type="text/css">
  
@@ -162,35 +161,25 @@ button:hover, button:hover::before {
       </style>
 </head>
 <body>
-  
-    <div class="container">
-      
-        <h1>Faça seu Pedido de Impressão</h1>
-        <form id="order-form">
-            <label for="print-type">Tipo de Impressão:</label>
-            <select id="print-type" name="print-type">
-                <option value="offset-A4">Offset - A4 (210mm x 297mm)</option>
-                <option value="offset-A3">Offset - A3 (297mm x 420mm)</option>
-                <option value="digital-A4">Digital - A4 (210mm x 297mm)</option>
-                <option value="digital-A3">Digital - A3 (297mm x 420mm)</option>
-                <option value="grande-formato-A2">Grande Formato - A2 (420mm x 594mm)</option>
-                <option value="grande-formato-A1">Grande Formato - A1 (594mm x 841mm)</option>
-            </select>
+    <h1>Pedido de Impressão</h1>
+    <form method="POST" action="/">
+        <label for="tipo_impressao">Tipo de Impressão:</label><br>
+        <select id="tipo_impressao" name="tipo_impressao">
+            <option value="Offset">Offset</option>
+            <option value="Digital">Digital</option>
+            <option value="Grande Formato">Grande Formato</option>
+        </select><br><br>
 
-            <label for="quantity">Quantidade:</label>
-            <input type="number" id="quantity" name="quantity" min="1">
+        <label for="quantidade">Quantidade:</label><br>
+        <input type="number" id="quantidade" name="quantidade" required><br><br>
 
-            <label for="deadline">Prazo de Entrega:</label>
-            <input type="date" id="deadline" name="deadline">
+        <label for="prazo_entrega">Prazo de Entrega:</label><br>
+        <input type="text" id="prazo_entrega" name="prazo_entrega" required><br><br>
 
-            <label for="comments">Comentários Adicionais:</label>
-            <textarea id="comments" name="comments" rows="4"></textarea>
+        <label for="comentarios">Comentários:</label><br>
+        <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br><br>
 
-            <button type="submit">Enviar Pedido</button>
-        </form>
-    </div>
-
-    <script src="script.js"></script>
+        <input type="submit" value="Enviar Pedido">
+    </form>
 </body>
-  
 </html>
